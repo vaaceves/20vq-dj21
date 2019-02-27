@@ -1,0 +1,6 @@
+django==2.1
+Pillow==2.5.0
+django-autoslug
+django-admin-interface
+django-auth-mixins
+django-widget-tweaks

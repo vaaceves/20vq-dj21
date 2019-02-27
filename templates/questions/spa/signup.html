@@ -1,0 +1,73 @@
+{% load staticfiles %}
+{% load widget_tweaks %}
+<html>
+    <head>
+
+    </head>
+    <body>
+        <style>
+            html, body{
+              height: 100%;
+            }
+            body {
+			background-image: url(https://global.willowcreek.com/img/2018_top.jpg) ;
+			background-position: center center;
+			background-repeat:  no-repeat;
+			background-attachment: fixed;
+			background-size:  cover;
+            background-color: #999;
+
+            }
+
+            div, body{
+              margin: 0;
+              padding: 0;
+              font-family: exo, sans-serif;
+
+            }
+            .wrapper {
+              height: 100%;
+              width: 100%;
+            }
+
+            .message {
+              -webkit-box-sizing: border-box;
+              -moz-box-sizing: border-box;
+              box-sizing: border-box;
+              width: 100%;
+              height:100%;
+              bottom: 0;
+              display: block;
+              position: absolute;
+              background-color: rgba(0,0,0,0.6);
+              color: #fff;
+              padding: 0.5em;
+            }
+        </style>
+    </body>
+</html>
+<div class="wrapper">
+  <div class="message" style="padding-top: 15%">
+      <center>
+          <h2>Regístrate</h2>
+          <img src="{% static 'assets/images/tgls2018-logos-others-90x83-90x83.png' %}">
+          <br>
+          <form method="post">
+                {% csrf_token %}
+                    <br>
+                {{ form.username }}
+                    <br>
+                    <br>
+                {{ form.email }}
+                    <br>
+                    <br>
+                {{ form.password }}
+                    <br>
+                    <br>
+                <button type="submit" value="Sign Up">Crear Cuenta</button>
+                <br><br>
+            </form>
+      </center>
+
+  </div>
+</div>
