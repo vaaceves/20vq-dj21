@@ -1,8 +1,10 @@
 {% load staticfiles %}
 {% load widget_tweaks %}
+{% load app_filters %}
 <html>
     <head>
-
+        <title>Log In</title>
+        <link rel="shortcut icon" href="{% static 'assets/images/tgls2018-logos-others-90x83-90x83.png' %}" type="image/x-icon">
     </head>
     <body>
         <style>
@@ -68,6 +70,9 @@
                   <br><br>
               {{ login_error_message }}
               {% endif %}
+              <br>
+              Cambiar Idioma: <a class="display-4" href="{{ request.get_full_path|to_spa }}">
+                  <img style="margin-bottom: -10px;" height="30px" width="40px" src="{% static 'assets/images/spain_round_icon_64.png' %}"></a>
             </form>
       </center>
 

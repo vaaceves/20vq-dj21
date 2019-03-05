@@ -18,6 +18,7 @@ from django.http import HttpResponseRedirect
 # SPANISH VIEWS
 #
 # index
+@login_required(login_url='login_spa')
 def index_spa(request):
     topic1 = Topic.objects.get(id=1)
     topic2 = Topic.objects.get(id=2)
@@ -39,6 +40,7 @@ def index_spa(request):
 
 
 # contact
+@login_required(login_url='login_spa')
 def contact_spa(request):
     topics = Topic.objects.all()
 
@@ -191,6 +193,7 @@ class SignUpUserViewSpa(CreateView):
 # ENGLISH VIEWS
 #
 # index
+@login_required(login_url='login_eng')
 def index_eng(request):
     topic1 = Topic.objects.get(id=1)
     topic2 = Topic.objects.get(id=2)
@@ -212,6 +215,7 @@ def index_eng(request):
 
 
 # contact
+@login_required(login_url='login_eng')
 def contact_eng(request):
     topics = Topic.objects.all()
 
