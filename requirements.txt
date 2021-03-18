@@ -1,5 +1,5 @@
 django==2.1
-Pillow==2.5.0
+Pillow==8.1.1
 django-autoslug
 django-admin-interface
 django-auth-mixins
